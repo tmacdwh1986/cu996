@@ -1,0 +1,349 @@
+<head>
+    <meta charset="utf-8">
+		<title>CU996</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1">
+    <link rel="stylesheet" href="../stylesheets/jquery.sidr.dark.min.css">
+		
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../js/fusioncharts.js"></script>
+    <script type="text/javascript" src="../jquery-fusioncharts.js"></script>
+    <script type="text/javascript" src="../js/themes/fusioncharts.theme.fusion.js"></script>
+    <script type="text/javascript" src="../jquery.sidr.js"></script> 
+</head>
+<body>
+	<a id="simple-menu" href="#sidr">Toggle menu</a>
+
+	<div id="sidr">
+		<ul>
+			<li><a href="activity.html">Capacity Maintenance</a></li>
+			<li><a href="overall_capacity_overview.html">Overall Capacity Overview</a></li>
+			<li><a href="personal_capacity_overview.html">Personal Capacity Overview</a></li>
+			<li class="active"><a href="activity.html">Activites</a></li>
+			<li><a href="profile.html">Profile</a></li>
+		</ul>
+	</div>
+
+
+  <div id="chart-container">FusionCharts XT will load here!</div>
+</body>
+
+
+
+<script>
+$( function() {
+ 
+	$('#simple-menu').sidr();
+	$('#simple-menu').click();   
+	
+
+} );
+
+const dataSource = {
+    "chart": {
+        "caption": "Top Smartphone Ratings",
+        "subcaption": "Jan.",
+        "xAxisName": "Day",
+        "yAxisName": "Week",
+        "showplotborder": "0",
+        "showValues": "1",
+        "xAxisLabelsOnTop": "0",
+        "baseFontColor": "#333333",
+        "toolTipBorderRadius": "2",
+        "toolTipPadding": "5",
+        "theme": "fusion"
+    },
+    "dataset": [
+        {
+            "data": [
+                {
+                    "rowid": "W1",
+                    "columnid": "SU",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W1",
+                    "columnid": "MO",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "BA"
+                },{
+                    "rowid": "W1",
+                    "columnid": "TU",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "BA"
+                },{
+                    "rowid": "W1",
+                    "columnid": "WE",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "BA"
+                },{
+                    "rowid": "W1",
+                    "columnid": "TH",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "BA"
+                },{
+                    "rowid": "W1",
+                    "columnid": "FR",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "BA"
+                },{
+                    "rowid": "W1",
+                    "columnid": "SA",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W2",
+                    "columnid": "SU",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W2",
+                    "columnid": "MO",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "PM"
+                },{
+                    "rowid": "W2",
+                    "columnid": "TU",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "PM"
+                },{
+                    "rowid": "W2",
+                    "columnid": "WE",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "PM"
+                },{
+                    "rowid": "W2",
+                    "columnid": "TH",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "PM"
+                },{
+                    "rowid": "W2",
+                    "columnid": "FR",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "PM"
+                },{
+                    "rowid": "W2",
+                    "columnid": "SA",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W3",
+                    "columnid": "SU",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W3",
+                    "columnid": "MO",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "BD"
+                },{
+                    "rowid": "W3",
+                    "columnid": "TU",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "BD"
+                },{
+                    "rowid": "W3",
+                    "columnid": "WE",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "BD"
+                },{
+                    "rowid": "W3",
+                    "columnid": "TH",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "BD"
+                },{
+                    "rowid": "W3",
+                    "columnid": "FR",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "BD"
+                },{
+                    "rowid": "W3",
+                    "columnid": "SA",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W4",
+                    "columnid": "SU",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W4",
+                    "columnid": "MO",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "FD"
+                },{
+                    "rowid": "W4",
+                    "columnid": "TU",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "FD"
+                },{
+                    "rowid": "W4",
+                    "columnid": "WE",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "FD"
+                },{
+                    "rowid": "W4",
+                    "columnid": "TH",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "FD"
+                },{
+                    "rowid": "W4",
+                    "columnid": "FR",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "FD"
+                },{
+                    "rowid": "W4",
+                    "columnid": "SA",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W5",
+                    "columnid": "SU",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                },{
+                    "rowid": "W5",
+                    "columnid": "MO",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "TS"
+                },{
+                    "rowid": "W5",
+                    "columnid": "TU",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "TS"
+                },{
+                    "rowid": "W5",
+                    "columnid": "WE",
+                    "value": "8",
+                    "tllabel": "RCM",
+                    "trlabel": "TS"
+                },{
+                    "rowid": "W5",
+                    "columnid": "TH",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "TS"
+                },{
+                    "rowid": "W5",
+                    "columnid": "FR",
+                    "value": "9",
+                    "tllabel": "RCM",
+                    "trlabel": "TS"
+                },{
+                    "rowid": "W5",
+                    "columnid": "SA",
+                    "value": "0",
+                    "tllabel": "",
+                    "trlabel": ""
+                }
+            ]
+        }
+    ],
+  "columns": {
+    "column": [
+      {
+        "id": "SU",
+        "label": "SU"
+      },
+      {
+        "id": "MO",
+        "label": "MO"
+      },
+      {
+        "id": "TU",
+        "label": "TU"
+      },
+      {
+        "id": "WE",
+        "label": "WE"
+      },
+      {
+        "id": "TH",
+        "label": "TH"
+      },
+      {
+        "id": "FR",
+        "label": "FR"
+      },
+      {
+        "id": "SA",
+        "label": "SA"
+      }
+    ]
+  },
+    "colorrange": {
+        "gradient": "0",
+        "minvalue": "0",
+        "code": "#000000",
+        "color": [
+            {
+                "code": "#aaaaaa",
+                "minvalue": "0",
+                "maxvalue": "1",
+                "label": "No Working"
+            },
+            {
+                "code": "#F6BC33",
+                "minvalue": "1",
+                "maxvalue": "5",
+                "label": "Lower"
+            },
+            {
+                "code": "#6DA81E",
+                "minvalue": "5",
+                "maxvalue": "9",
+                "label": "Good"
+            },
+            {
+                "code": "#e24b1a",
+                "minvalue": "9",
+                "maxvalue": "9999",
+                "label": "Overload"
+            }
+        ]
+    }
+};
+
+FusionCharts.ready(function() {
+  var myChart = new FusionCharts({
+    type: "heatmap",
+    renderAt: "chart-container", 
+    width: "90%",
+    height: "90%",
+    dataFormat: "json",
+    dataSource
+  }).render();
+});
+
+
+</script>

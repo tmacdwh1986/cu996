@@ -1,0 +1,40 @@
+<head>
+    <meta charset="utf-8">
+		<title>CU996</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1">
+		<link rel="stylesheet" href="../stylesheets/jquery.sidr.dark.min.css">
+		
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../js/fusioncharts.js"></script>
+    <script type="text/javascript" src="../jquery-fusioncharts.js"></script>
+    <script type="text/javascript" src="../js/themes/fusioncharts.theme.fusion.js"></script>
+    <script type="text/javascript" src="../jquery.sidr.js"></script> 
+</head>
+<body>
+	<a id="simple-menu" href="#sidr">Toggle menu</a>
+
+	<div id="sidr">
+		<ul>
+			<li class="active"><a href="maintanence.html">Capacity Maintenance</a></li>
+			<li><a href="overall_capacity_overview.html">Overall Capacity Overview</a></li>
+			<li><a href="personal_capacity_overview.html">Personal Capacity Overview</a></li>
+			<li><a href="activity.html">Activites</a></li>
+			<li><a href="profile.html">Profile</a></li>
+		</ul>
+	</div>
+
+
+  <div id="chart-container">FusionCharts XT will load here!</div>
+</body>
+
+
+
+<script>
+$( function() {
+
+	$('#simple-menu').sidr();
+	$('#simple-menu').click(); 
+	
+
+} );
+</script>
