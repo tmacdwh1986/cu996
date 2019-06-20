@@ -13,3 +13,6 @@ target
 *.zip
 *.tar.gz
 *.rar
+
+.project
+.settings
