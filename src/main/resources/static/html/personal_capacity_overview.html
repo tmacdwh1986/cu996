@@ -2,29 +2,47 @@
     <meta charset="utf-8">
 		<title>CU996</title>
 		<meta name="viewport" content="width=device-width,minimum-scale=1">
-    <link rel="stylesheet" href="../stylesheets/jquery.sidr.dark.min.css">
+		<link rel="stylesheet" href="../amazeui/css/amazeui.min.css"/>
+		<link rel="stylesheet" href="../amazeui/css/admin.css">
 		
     <script type="text/javascript" src="../jquery-3.4.1.js"></script>
     <script type="text/javascript" src="../js/fusioncharts.js"></script>
     <script type="text/javascript" src="../jquery-fusioncharts.js"></script>
     <script type="text/javascript" src="../js/themes/fusioncharts.theme.fusion.js"></script>
-    <script type="text/javascript" src="../jquery.sidr.js"></script> 
+
+		<script src="../amazeui/js/amazeui.min.js"></script>
+		<script src="../amazeui/js/app.js"></script>
 </head>
 <body>
-	<a id="simple-menu" href="#sidr">Toggle menu</a>
+		<header class="am-topbar am-topbar-inverse admin-header">
+				<div class="am-topbar-brand">
+					CU996 Backoffice !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+				</div>
+			
+				<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+			
+				<div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+			
+					<ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+						<li><a href="personal_capacity_overview.html">Personal Capacity Overview</a></li>
+						<li><a href="maintanence.html">Capacity Maintenance</a></li>
+						<li class="am-dropdown" data-am-dropdown>
+							<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+								<span class="am-icon-users"></span> Admin <span class="am-icon-caret-down"></span>
+							</a>
+							<ul class="am-dropdown-content">
+								<li><a href="overall_capacity_overview.html">Overall Capacity Overview</a></li>
+								<li><a href="activity.html">Activites</a></li>
+								<li><a href="profile.html">Profile</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+			</header>
 
-	<div id="sidr">
-		<ul>
-			<li><a href="activity.html">Capacity Maintenance</a></li>
-			<li><a href="overall_capacity_overview.html">Overall Capacity Overview</a></li>
-			<li><a href="personal_capacity_overview.html">Personal Capacity Overview</a></li>
-			<li class="active"><a href="activity.html">Activites</a></li>
-			<li><a href="profile.html">Profile</a></li>
-		</ul>
-	</div>
-
-
-  <div id="chart-container">FusionCharts XT will load here!</div>
+  <div id="chart-container" style="overflow-x:auto">Capacity overview chart is loading!</div>
 </body>
 
 
@@ -32,9 +50,6 @@
 <script>
 $( function() {
  
-	$('#simple-menu').sidr();
-	$('#simple-menu').click();   
-	
 
 } );
 
