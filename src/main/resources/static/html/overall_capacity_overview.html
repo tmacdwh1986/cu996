@@ -1,0 +1,339 @@
+<head>
+    <meta charset="utf-8">
+		<title>CU996</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1">
+		<link rel="stylesheet" href="../amazeui/css/amazeui.min.css"/>
+		<link rel="stylesheet" href="../amazeui/css/admin.css">
+		
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../js/fusioncharts.js"></script>
+    <script type="text/javascript" src="../jquery-fusioncharts.js"></script>
+    <script type="text/javascript" src="../js/themes/fusioncharts.theme.fusion.js"></script>
+
+		<script src="../amazeui/js/amazeui.min.js"></script>
+		<script src="../amazeui/js/app.js"></script>
+</head>
+<body>
+
+	<header class="am-topbar am-topbar-inverse admin-header">
+		<div class="am-topbar-brand">
+			CU996 Backoffice !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		</div>
+	
+		<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+	
+		<div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+	
+			<ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+				<li><a href="personal_capacity_overview.html">Personal Capacity Overview</a></li>
+				<li><a href="maintanence.html">Capacity Maintenance</a></li>
+				<li class="am-dropdown" data-am-dropdown>
+					<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+						<span class="am-icon-users"></span> Admin <span class="am-icon-caret-down"></span>
+					</a>
+					<ul class="am-dropdown-content">
+						<li><a href="overall_capacity_overview.html">Overall Capacity Overview</a></li>
+						<li><a href="activity.html">Activites</a></li>
+						<li><a href="profile.html">Profile</a></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</li>
+			
+			</ul>
+		</div>
+	</header>
+
+	<div id="chart-container" style="overflow-x:auto">Capacity overview chart is loading!</div>
+
+</body>
+
+
+
+<script>
+$( function() {
+    
+	$("#chart-container").insertFusionCharts({
+  type: "gantt",
+  width: "600%",
+  height: "90%",
+  dataFormat: "json",
+  dataSource: {
+    chart: {
+      caption: "Resource Capacity Overview",
+      subcaption: "DAD-AP & PJ-ECO",
+      theme: "fusion",
+      dateformat: "dd/mm/yyyy",
+      plottooltext: "Status for period <b>$start - $end</b> is <b>$label</b>"
+    },
+    legend: {
+      item: [
+        {
+          label: "BA",
+          color: "#62B58D"
+        },
+        {
+          label: "PM",
+          color: "#FFC533"
+        },
+        {
+          label: "CONSULTING",
+          color: "#F2726F"
+        }
+      ]
+    },
+    tasks: {
+      task: [
+        {
+          label: "BA",
+          processid: "A",
+          start: "1/1/2019",
+          end: "5/1/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "1"
+        },
+        {
+          label: "PM",
+          processid: "A",
+          start: "13/1/2019",
+          end: "18/1/2019",
+          bordercolor: "#F2726F",
+          color: "#F2726F",
+          id: "2"
+        },
+        {
+          label: "CONSULTING",
+          processid: "A",
+          start: "18/1/2019",
+          end: "27/1/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "3"
+        },
+        {
+          label: "BA",
+          processid: "A",
+          start: "27/1/2019",
+          end: "29/1/2019",
+          bordercolor: "#FFC533",
+          color: "#FFC533",
+          id: "4"
+        },
+        {
+          label: "BA",
+          processid: "A",
+          start: "29/3/2019",
+          end: "4/5/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "5"
+        },
+        {
+          label: "PM",
+          processid: "B",
+          start: "13/1/2019",
+          end: "18/1/2019",
+          bordercolor: "#F2726F",
+          color: "#F2726F",
+          id: "2"
+        },
+        {
+          label: "CONSULTING",
+          processid: "B",
+          start: "18/1/2019",
+          end: "27/1/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "3"
+        },
+        {
+          label: "BA",
+          processid: "B",
+          start: "10/2/2019",
+          end: "4/5/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "5"
+        }, {
+          label: "BA",
+          processid: "C",
+          start: "1/1/2019",
+          end: "5/1/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "1"
+        },
+        {
+          label: "CONSULTING",
+          processid: "C",
+          start: "18/1/2019",
+          end: "27/1/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "3"
+        },
+        {
+          label: "BA",
+          processid: "C",
+          start: "27/1/2019",
+          end: "29/2/2019",
+          bordercolor: "#FFC533",
+          color: "#FFC533",
+          id: "4"
+        },
+        {
+          label: "BA",
+          processid: "C",
+          start: "29/3/2019",
+          end: "4/5/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "5"
+        }, {
+          label: "BA",
+          processid: "D",
+          start: "1/1/2019",
+          end: "5/1/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "1"
+        },
+        {
+          label: "PM",
+          processid: "D",
+          start: "13/1/2019",
+          end: "18/2/2019",
+          bordercolor: "#F2726F",
+          color: "#F2726F",
+          id: "2"
+        },
+        {
+          label: "BA",
+          processid: "D",
+          start: "27/2/2019",
+          end: "29/3/2019",
+          bordercolor: "#FFC533",
+          color: "#FFC533",
+          id: "4"
+        },
+        {
+          label: "BA",
+          processid: "D",
+          start: "29/3/2019",
+          end: "4/5/2019",
+          bordercolor: "#62B58D",
+          color: "#62B58D",
+          id: "5"
+        }
+      ]
+    },
+    processes: {
+      isbold: "1",
+      headertext: "Name",
+      process: [
+        {
+          label: "Jamie Qin",
+          id: "A"
+        },
+        {
+          label: "Chen Xiaofei",
+          id: "B"
+        },
+        {
+          label: "Raymond Dai",
+          id: "C"
+        },
+        {
+          label: "Shen Kai",
+          id: "D"
+        }
+      ]
+    },
+    categories: [
+      {
+        category: [
+          {
+            start: "31/12/2018",
+            end: "3/2/2019",
+            name: "Jan. 2019"
+          },
+		  {
+            start: "4/2/2019",
+            end: "3/3/2019",
+            name: "Feb. 2019"
+          },
+		  {
+            start: "4/3/2019",
+            end: "31/3/2019",
+            name: "Mar. 2019"
+          },
+		  {
+            start: "1/4/2019",
+            end: "5/5/2019",
+            name: "Apr. 2019"
+          },
+		  {
+            start: "6/5/2019",
+            end: "2/6/2019",
+            name: "May. 2019"
+          },
+		  {
+            start: "3/6/2019",
+            end: "30/6/2019",
+            name: "Jun. 2019"
+          },
+		  {
+            start: "1/7/2019",
+            end: "4/8/2019",
+            name: "Jul. 2019"
+          },
+		  {
+            start: "5/8/2019",
+            end: "1/9/2019",
+            name: "Aug. 2019"
+          },
+		  {
+            start: "2/9/2019",
+            end: "6/10/2019",
+            name: "Sep. 2019"
+          },
+		  {
+            start: "7/10/2019",
+            end: "3/11/2019",
+            name: "Oct. 2019"
+          },
+		  {
+            start: "4/11/2019",
+            end: "1/12/2019",
+            name: "Nov. 2019"
+          },
+		  {
+            start: "2/12/2019",
+            end: "5/1/2020",
+            name: "Dec. 2019"
+          }
+        ]
+      },
+      {
+        bgalpha: "0",
+        category: [
+		{"start":"31/12/2018","end":"06/01/2019","label":"Week 1"},{"start":"07/01/2019","end":"13/01/2019","label":"Week 2"},{"start":"14/01/2019","end":"20/01/2019","label":"Week 3"},{"start":"21/01/2019","end":"27/01/2019","label":"Week 4"},{"start":"28/01/2019","end":"03/02/2019","label":"Week 5"},
+		{"start":"04/02/2019","end":"10/02/2019","label":"Week 6"},{"start":"11/02/2019","end":"17/02/2019","label":"Week 7"},{"start":"18/02/2019","end":"24/02/2019","label":"Week 8"},{"start":"25/02/2019","end":"03/03/2019","label":"Week 9"},
+		{"start":"04/03/2019","end":"10/03/2019","label":"Week 10"},{"start":"11/03/2019","end":"17/03/2019","label":"Week 11"},{"start":"18/03/2019","end":"24/03/2019","label":"Week 12"},{"start":"25/03/2019","end":"31/03/2019","label":"Week 13"},
+		{"start":"01/04/2019","end":"07/04/2019","label":"Week 14"},{"start":"08/04/2019","end":"14/04/2019","label":"Week 15"},{"start":"15/04/2019","end":"21/04/2019","label":"Week 16"},{"start":"22/04/2019","end":"28/04/2019","label":"Week 17"},{"start":"29/04/2019","end":"05/05/2019","label":"Week 18"},
+		{"start":"06/05/2019","end":"12/05/2019","label":"Week 19"},{"start":"13/05/2019","end":"19/05/2019","label":"Week 20"},{"start":"20/05/2019","end":"26/05/2019","label":"Week 21"},{"start":"27/05/2019","end":"02/06/2019","label":"Week 22"},
+		{"start":"03/06/2019","end":"09/06/2019","label":"Week 23"},{"start":"10/06/2019","end":"16/06/2019","label":"Week 24"},{"start":"17/06/2019","end":"23/06/2019","label":"Week 25"},{"start":"24/06/2019","end":"30/06/2019","label":"Week 26"},
+		{"start":"01/07/2019","end":"07/07/2019","label":"Week 27"},{"start":"08/07/2019","end":"14/07/2019","label":"Week 28"},{"start":"15/07/2019","end":"21/07/2019","label":"Week 29"},{"start":"22/07/2019","end":"28/07/2019","label":"Week 30"},{"start":"29/07/2019","end":"04/08/2019","label":"Week 31"},
+		{"start":"05/08/2019","end":"11/08/2019","label":"Week 32"},{"start":"12/08/2019","end":"18/08/2019","label":"Week 33"},{"start":"19/08/2019","end":"25/08/2019","label":"Week 34"},{"start":"26/08/2019","end":"01/09/2019","label":"Week 35"},
+		{"start":"02/09/2019","end":"08/09/2019","label":"Week 36"},{"start":"09/09/2019","end":"15/09/2019","label":"Week 37"},{"start":"16/09/2019","end":"22/09/2019","label":"Week 38"},{"start":"23/09/2019","end":"29/09/2019","label":"Week 39"},{"start":"30/09/2019","end":"06/10/2019","label":"Week 40"},
+		{"start":"07/10/2019","end":"13/10/2019","label":"Week 41"},{"start":"14/10/2019","end":"20/10/2019","label":"Week 42"},{"start":"21/10/2019","end":"27/10/2019","label":"Week 43"},{"start":"28/10/2019","end":"03/11/2019","label":"Week 44"},
+		{"start":"04/11/2019","end":"10/11/2019","label":"Week 45"},{"start":"11/11/2019","end":"17/11/2019","label":"Week 46"},{"start":"18/11/2019","end":"24/11/2019","label":"Week 47"},{"start":"25/11/2019","end":"01/12/2019","label":"Week 48"},
+		{"start":"02/12/2019","end":"08/12/2019","label":"Week 49"},{"start":"09/12/2019","end":"15/12/2019","label":"Week 50"},{"start":"16/12/2019","end":"22/12/2019","label":"Week 51"},{"start":"23/12/2019","end":"29/12/2019","label":"Week 52"},{"start":"30/12/2019","end":"5/1/2020","label":"Week 53"}]
+      }
+    ]
+  }
+});
+
+
+} );
+</script>
