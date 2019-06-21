@@ -12,7 +12,7 @@ public interface ActivityRepository extends JpaRepository<Activity, Integer> {
     Activity findByName(String name);
 
     @Query(value = "", nativeQuery = true)
-    List<Object[]> getEffortByPjoname();
+    List<Activity> findEffortByPjoname();
 
     Activity save(Activity productInfo);
 }

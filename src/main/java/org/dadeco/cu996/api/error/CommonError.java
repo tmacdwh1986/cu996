@@ -1,9 +1,9 @@
 package org.dadeco.cu996.api.error;
 
 public interface CommonError {
-    public int getErrCode();
+    int getErrCode();
 
-    public String getErrMsg();
+    String getErrMsg();
 
-    public CommonError setErrMsg(String errMsg);
+    CommonError setErrMsg(String errMsg);
 }
