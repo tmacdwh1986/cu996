@@ -3,8 +3,8 @@
 >
 <head>
     <meta charset="utf-8">
-		<title>CU996</title>
-		<meta name="viewport" content="width=device-width,minimum-scale=1">
+	<title>My Profile</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1">
 	<link rel="stylesheet" th:href="@{/public/amazeui/css/amazeui.min.css}" />
 	<link rel="stylesheet" th:href="@{/public/amazeui/css/admin.css}">
 
@@ -17,35 +17,7 @@
 	<script th:src="@{/public/amazeui/js/app.js}"></script>
 </head>
 <body>
-		<header class="am-topbar am-topbar-inverse admin-header">
-				<div class="am-topbar-brand">
-					CU996 Backoffice !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-				</div>
-			
-				<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
-			
-				<div class="am-collapse am-topbar-collapse" id="topbar-collapse">
-			
-					<ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-						<li><a href="personal_capacity_overview.html">Personal Capacity Overview</a></li>
-						<li><a href="maintanence.html">Capacity Maintenance</a></li>
-						<li class="am-dropdown" data-am-dropdown>
-							<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-								<span class="am-icon-users"></span> Admin <span class="am-icon-caret-down"></span>
-							</a>
-							<ul class="am-dropdown-content">
-								<li><a th:href="@{/overview/team}">Overall Capacity Overview</a></li>
-								<li><a th:href="@{/overview/me}">My Capacity Overview</a></li>
-								<li><a th:href="@{/activity}">Activites</a></li>
-								<li><a th:href="@{/profile}">Profile</a></li>
-								<li><a th:href="@{/logout}">Logout</a></li>
-							</ul>
-						</li>
-						
-					</ul>
-				</div>
-			</header>
-
+	<div th:replace="navigator"></div>
 
    <!-- content start -->
 	 <div class="admin-content">
