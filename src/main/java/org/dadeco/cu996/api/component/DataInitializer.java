@@ -52,7 +52,7 @@ public class DataInitializer implements
         createRoleIfNotFound("ROLE_USER", new HashSet<Privilege>(Arrays.asList(readPrivilege)));
 
         String adminEmail = "test@dadeco.com";
-        String adminNtAccount = "test8sgh";
+        String adminNtAccount = "test7sgh";
 
         User admin = userRepository.findByEmail(adminEmail);
         if(admin == null) {
@@ -61,7 +61,7 @@ public class DataInitializer implements
             User user = new User();
             user.setName("Test");
             user.setPassword(passwordEncoder.encode("test"));
-            user.setEmail("test@test.com");
+            user.setEmail(adminEmail);
             Set<Role> roles = new HashSet<>();
             roles.add(adminRole);
             user.setRoles(roles);
