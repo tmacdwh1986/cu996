@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable().headers().frameOptions().disable().and().authorizeRequests()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .antMatchers("/public/**").permitAll()
-                .antMatchers("/", "/overview/**", "/profile","/activities").authenticated()
+                .antMatchers("/", "/overview/**", "/profile","/activities","/input").authenticated()
                 //.antMatchers("/hello**").hasAuthority("ADMIN")
                 .and().formLogin().loginPage("/login")
                 .failureUrl("/login?error").permitAll()
