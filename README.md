@@ -7,4 +7,5 @@ links:
 /overview/team
 /overview/me
 /profile
-/activities
+/activity
+/plan
