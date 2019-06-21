@@ -9,10 +9,7 @@ import java.util.List;
 
 @Repository
 public interface ActivityRepository extends JpaRepository<Activity, Integer> {
-    Activity findByNtAccount(String ntAccount);
-
-    Activity findByEmail(String email);
-
+    Activity findByName(String name);
 
     @Query(value = "", nativeQuery = true)
     List<Object[]> getEffortByPjoname();

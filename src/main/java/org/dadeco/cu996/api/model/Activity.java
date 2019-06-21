@@ -28,10 +28,6 @@ public class Activity {
     @Column(name = "end")
     private String end;
 
-    @NonNull
-    @Column(name = "password")
-    private String role;
-
     @Column(name = "chargeable")
     @NonNull
     private String chargeable;
@@ -43,4 +39,7 @@ public class Activity {
     @Column(name = "daily_effort")
     @NonNull
     private Integer dailyEffort;
+
+    @Enumerated(EnumType.STRING)
+    private ActivityRole role;
 }
